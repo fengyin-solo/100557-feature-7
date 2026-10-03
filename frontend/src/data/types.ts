@@ -27,6 +27,13 @@ export type PageResult = {
   size: number
 }
 
+export type ActionContext = {
+  operator?: string
+  zoneCode?: string
+  // 提交监测时录入的读数与培养基批号；判定类动作不需要。
+  payload?: Record<string, string>
+}
+
 export type ActionResult = {
   ok: boolean
   message: string
